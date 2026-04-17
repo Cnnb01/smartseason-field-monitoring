@@ -1,8 +1,8 @@
 .env
-db.sqlite3
-myvenv
+Backend/db.sqlite3
+Backend/venv
 # Byte-compiled / optimized / DLL files
-__pycache__/
+Backend/__pycache__/
 *.py[cod]
 *$py.class
 **/migrations/*.py
@@ -10,3 +10,7 @@ __pycache__/
 *.pyc
 migrations/
 notes
+
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.env
