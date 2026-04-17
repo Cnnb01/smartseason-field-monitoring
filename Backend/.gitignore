@@ -1,0 +1,11 @@
+.env
+db.sqlite3
+myvenv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+**/migrations/*.py
+!**/migrations/__init__.py
+*.pyc
+migrations/
