@@ -22,7 +22,7 @@ const Dashboard: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Navigation Header */}
       <nav className="bg-white border-b px-8 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-green-800">SmartSeason Dashboard</h1>
+        <h1 className="text-xl font-bold text-green-800">Welcome to SmartSeason Dashboard</h1>
         <div className="flex items-center gap-4">
           <span className="text-sm font-medium px-3 py-1 bg-green-100 text-green-800 rounded-full">
             {user?.role}
