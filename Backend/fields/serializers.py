@@ -8,6 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class FieldUpdateSerializer(serializers.ModelSerializer):
     agent_name = serializers.ReadOnlyField(source='agent.username')
+    agent = serializers.ReadOnlyField(source='agent.id')
     class Meta:
         model = FieldUpdate
         fields = ['id', 'field', 'agent', 'agent_name', 'stage_at_update','notes', 'timestamp']
