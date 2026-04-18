@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions
-from .models import *
+from .models import Field, FieldUpdate, User
 from .serializers import *
-from django.contrib.auth.models import User
 from rest_framework.decorators import action
 from rest_framework.response import Response
 # Create your views here.
@@ -33,13 +32,15 @@ class FieldUpdateViewSet(viewsets.ModelViewSet):
             return FieldUpdate.objects.filter(agent=user)
 
     def perform_create(self, serializer):
-        return super().perform_create(serializer)
-    
+        serializer.save(agent=self.request.user)
+
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def get_queryset(self):
+        return User.objects.all()
+    
     @action(detail=False, methods=['get'])
     def me(self, request):
         """
