@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useFields } from "../hooks/useFields";
 import { LayoutGrid, AlertTriangle, CheckCircle2, Sprout} from "lucide-react";
@@ -6,6 +7,7 @@ import { LayoutGrid, AlertTriangle, CheckCircle2, Sprout} from "lucide-react";
 const Dashboard: React.FC = () => {
   const { user, logout } = useAuth();
   const { fields, loading } = useFields();
+  const navigate = useNavigate();
 
   const stats = {
     total: fields.length,
@@ -55,7 +57,7 @@ const Dashboard: React.FC = () => {
               <p className="text-sm text-gray-600 mb-4">Stage: {field.current_stage}</p>
               <div className="pt-4 border-t flex justify-between items-center">
                 <span className="text-xs text-gray-400">Agent: {field.assigned_agent_name}</span>
-                <button className="text-green-600 text-sm font-semibold hover:text-green-700">
+                <button onClick={() => navigate(`/field/${field.id}`)} className="text-green-600 text-sm font-semibold hover:text-green-700">
                   View Details →
                 </button>
               </div>

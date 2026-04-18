@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import FieldDetail from './pages/FieldDetail';
 
 // route protection
 const PrivateRoute = ({children}: {children: React.ReactNode}) =>{
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<PrivateRoute>
             <Dashboard/>
           </PrivateRoute>} />
+          <Route path="/field/:id" element={<PrivateRoute><FieldDetail /></PrivateRoute>} />
         </Routes>
       </Router>
     </AuthProvider>           
