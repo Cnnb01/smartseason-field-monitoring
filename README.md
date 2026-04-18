@@ -3,7 +3,7 @@
 A full-stack monorepo designed for agricultural field management, enabling real-time status tracking and role-based access for Admins and Field Agents.
 
 ## Project Overview
-SmartSeason allows agents to log field activities and observations. The system automatically calculates field health based on activity logs, marking fields as **"AT RISK"** if certain keywords (pest, disease, etc.) are detected or if no updates have been logged for over 7 days.
+SmartSeason allows agents to log field activities and observations. The system automatically calculates field health based on activity logs, marking fields as **"AT RISK"** if certain keywords (pest, disease, or wilt.) are detected or if no updates have been logged for over 7 days.
 
 ### Tech Stack
 * **Backend:** Django (Python 3.12+), Django REST Framework, SimpleJWT.
@@ -13,7 +13,7 @@ SmartSeason allows agents to log field activities and observations. The system a
 
 ---
 
-## 🛠️ Key Design Decisions
+## Key Design Decisions
 
 ### 1. Custom User Model & RBAC
 Used a custom `User` model to implement **Role-Based Access Control (RBAC)**.
@@ -32,7 +32,7 @@ Implemented **JWT (JSON Web Tokens)** for stateless authentication. The frontend
 
 ---
 
-## 🏗️ Local Setup & Demo Instructions
+## Local Setup & Demo Instructions
 
 ### Prerequisites
 * Python 3.12+
