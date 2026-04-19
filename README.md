@@ -37,7 +37,6 @@ Implemented **JWT (JSON Web Tokens)** for stateless authentication. The frontend
 ### Prerequisites
 * Python 3.12+
 * Node.js (v18+)
-* Fedora Linux (or any Unix-based system)
 
 ### 1. Backend Setup
 ```bash
@@ -45,7 +44,7 @@ cd Backend
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python manage.py makemigration 
+python manage.py makemigrations 
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
