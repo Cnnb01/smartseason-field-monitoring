@@ -64,7 +64,7 @@ const FieldDetail: React.FC = () => {
             <label className="block text-sm font-medium mb-1">Observation Notes</label>
             <textarea 
               className="w-full p-2 border rounded bg-white h-24"
-              placeholder="e.g., Soil moisture is low, or Pests spotted on north side."
+              placeholder="e.g.,Pests spotted on north side, wilt or disease on plants"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               required
